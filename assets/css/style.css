@@ -1,0 +1,29 @@
+ul.icons {
+  li {
+    a {
+      display: block;
+      height: 24px;
+      width: 24px;
+    }
+    a.linkedin {
+      background-image: url('../../images/linkedin.png'); 
+    } 
+    
+    a.github { 
+      background-image: url('../../images/github.png'); 
+    } 
+    
+    a.hackerrank { 
+      background-image: url('../../images/hackerrank.png'); 
+    } 
+    a.medium { 
+      background-image: url('../../images/medium.png'); 
+    } 
+    a.x-twitter { 
+      background-image: url('../../images/twitter.png'); 
+    } 
+    a.leetcode { 
+      background-image: url('../../images/leetcode.png');
+    }
+  }
+}
