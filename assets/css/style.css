@@ -1,29 +1,87 @@
-ul.icons {
-  li {
-    a {
-      display: block;
-      height: 24px;
-      width: 24px;
-    }
-    a.linkedin {
-      background-image: url('../../images/linkedin.png'); 
-    } 
-    
-    a.github { 
-      background-image: url('../../images/github.png'); 
-    } 
-    
-    a.hackerrank { 
-      background-image: url('../../images/hackerrank.png'); 
-    } 
-    a.medium { 
-      background-image: url('../../images/medium.png'); 
-    } 
-    a.x-twitter { 
-      background-image: url('../../images/twitter.png'); 
-    } 
-    a.leetcode { 
-      background-image: url('../../images/leetcode.png');
-    }
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DroidSans-Bold", "Droid Sans", "Helvetica", "Arial", "sans-serif";
+}
+
+/* Navbar */
+#navbar { 
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #47A9B7;
+  color: #fff;
+  padding: 6px 0px;
+}
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#navbar ul li {
+  display: inline;
+  margin: 0 10px 0 10px;
+}
+#navbar ul li a {
+  text-decoration: none;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+#navbar button {
+  background-color: #47A9B7;
+}
+.download {
+  background-image: url('../../images/download.png');
+  border: none;
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+}
+.theme {
+  background-image: url('../../images/light-mode.png');
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+.theme.dark-theme {
+  background-image: url('../../images/dark-mode.png');
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+#navbar ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+#navbar button:hover {
+  cursor: pointer;
+}
+
+/* Social Media Icons */ 
+ul.icons li a {
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+ul.icons li a.linkedin {
+  background-image: url('../../images/linkedin.png');
+}
+ul.icons li a.github {
+  background-image: url('../../images/github.png');
+}
+ul.icons li a.hackerrank {
+  background-image: url('../../images/hackerrank.png');
+}
+ul.icons li a.medium {
+  background-image: url('../../images/medium.png');
+}
+ul.icons li a.x-twitter {
+  background-image: url('../../images/twitter.png');
+}
+ul.icons li a.leetcode {
+  background-image: url('../../images/leetcode.png');
 }

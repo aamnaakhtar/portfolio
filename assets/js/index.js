@@ -1,6 +1,6 @@
 function downloadResume() {
   // 1. Create an invisible anchor element
-  const link = document.createElement("a");
+  let link = document.createElement("a");
 
   // 2. Set the link's attributes
   link.href = "Resume - Aamna.pdf"; // URL of the file
@@ -11,4 +11,9 @@ function downloadResume() {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+}
+
+function toggleTheme() {
+  let toggleButton = document.querySelector(".theme");
+  toggleButton.classList.toggle("dark-theme");
 }

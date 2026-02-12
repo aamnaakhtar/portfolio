@@ -3,8 +3,8 @@
 <html>
   <head>
     <title>Aamna's Portfolio</title>
-    <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
-    <link rel="shortcut icon" href="images/favicon.png?v=2" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -15,24 +15,32 @@
   </head>
   <body class="is-preload">
     <!-- Header -->
-    <section id="header">
-      <header>
+    <div id="header">
+      <!-- Photo and Tag line section -->
+      <!-- <header>
         <span class="image avatar"
           ><img src="images/mypicture.jpg" alt=""
         /></span>
         <h1 id="logo">Aamna Akhtar</h1>
         <p>A passionate Computer Science Engineer.</p>
-      </header>
-      <nav id="nav">
-        <ul>
-          <li><a href="#one" class="active">About Me</a></li>
-          <li><a href="#two">Skills</a></li>
-          <!--li><a href="#five">Projects</a></li-->
-          <li><a href="#three">A Few Accomplishments</a></li>
-          <li><a href="#four">Contact Me</a></li>
-        </ul>
-      </nav>
-      <footer>
+      </header> -->
+      <div id="navbar"> 
+					<ul>
+						<li><a href="#one" class="active">Home</a></li>
+						<li><a href="#two">Experience</a></li>
+						<li><a href="#three">Projects</a></li>
+						<li><a href="#four">Skills</a></li>
+						<li><a href="#five">Education</a></li>
+						<li><a href="#six">Accomplishments</a></li>
+						<li><a href="#seven">Contact Me</a></li>
+					</ul>
+					<ul><li>
+					<a href="Resume - Aamna.pdf" class="resume" target="_blank">Resume</a><button onclick="downloadResume()" class="icon download">
+                </button></li>
+					<li><button onclick="toggleTheme()" class="theme"></button></li></ul>
+				</div>
+      <!-- Social Media Links -->
+      <!-- <footer>
         <ul class="icons">
           <li>
             <a
@@ -89,7 +97,7 @@
             ></a>
           </li>
         </ul>
-      </footer>
+      </footer> -->
     </section>
 
     <!-- Wrapper -->
@@ -122,16 +130,6 @@
               interest in reading that has inculcated in me a habit of writing
               qoutes, poems and stories.
             </p>
-            <ul class="actions">
-              <li>
-                <a href="Resume - Aamna.pdf" target="_blank"
-                  ><input type="submit" class="primary" value="Resume"
-                /></a>
-                <button onclick="downloadResume()">
-                  <i class="icon solid fa-download"></i>
-                </button>
-              </li>
-            </ul>
           </div>
         </section>
 
