@@ -26,7 +26,7 @@ function toggleTheme() {
 }
 
 //  Calculate years of experience
-const startDate = new Date("2023-01-01"); // joining date
+const startDate = new Date("2022-09-01"); // joining date
 const today = new Date();
 let years = today.getFullYear() - startDate.getFullYear();
 
