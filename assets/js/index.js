@@ -17,3 +17,19 @@ function toggleTheme() {
   let toggleButton = document.querySelector(".theme");
   toggleButton.classList.toggle("dark-theme");
 }
+
+//  Calculate years of experience
+const startDate = new Date("2023-01-01"); // joining date
+const today = new Date();
+let years = today.getFullYear() - startDate.getFullYear();
+
+// check if anniversary passed this year
+const hasCompletedYear =
+  today.getMonth() > startDate.getMonth() ||
+  (today.getMonth() === startDate.getMonth() &&
+    today.getDate() >= startDate.getDate());
+
+if (!hasCompletedYear) {
+  years--;
+}
+document.querySelector(".yoe").textContent = years + "+";

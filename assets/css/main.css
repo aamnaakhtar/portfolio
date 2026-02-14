@@ -21,7 +21,7 @@ section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	/* font: inherit; */
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
@@ -1757,16 +1757,16 @@ input, select, textarea {
 	}
 
 	header p {
-		color: #aaa;
+		/* color: #aaa; */
 		position: relative;
 		margin: 0 0 1.6875em 0;
 	}
 
-	header h2 + p {
+	/* header h2 + p {
 		font-size: 1.25em;
 		margin-top: -0.5em;
 		line-height: 1.5em;
-	}
+	} */
 
 	header h3 + p {
 		font-size: 1.1em;
@@ -1787,12 +1787,12 @@ input, select, textarea {
 		font-size: 3.5em;
 	}
 
-		header.major h2 + p {
+		/* header.major h2 + p {
 			color: #777;
 			font-size: 1.75em;
 			font-weight: 700;
 			margin-top: -0.75em;
-		}
+		} */
 
 /* Form */
 
