@@ -34,8 +34,17 @@ p {
   text-align: justify;
 }
 h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 10px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
 }
 
 
@@ -163,7 +172,9 @@ div.experience {
   text-align: center;
 }
 .detail {
-  margin: 40px 30px 10px 15px;
+  margin: auto;
+  margin-left: 25px;
+  margin-right: 40px;
 }
 
 /* Social Media Icons */ 
@@ -214,12 +225,11 @@ ul.icons li a.leetcode:hover {
 }
 
 /* Experience */
-.experience-section, .education {
+.timeline-section {
   margin: 30px;
 }
 .timeline {
   position: relative;
-  margin: 40px 0;
   padding: 0 40px;
 }
 /* vertical line */
@@ -234,18 +244,20 @@ ul.icons li a.leetcode:hover {
 }
 .timeline-item {
   position: relative;
-  margin-bottom: 40px;
 }
 /* circle */
 .timeline-dot {
   position: absolute;
-  left: -30px;
-  top: 4px;
-  width: 12px;
-  height: 12px;
+  left: -29px;
+  top: 2px;
+  width: 10px;
+  height: 10px;
   background: #47A9B7;
-  /* border-radius: 50%; */
+  border-radius: 50%;
   padding: 4px 0;
+}
+.timeline-content {
+  padding: 30px;
 }
 .timeline-content h2 {
   margin: 0 0 8px;
@@ -262,6 +274,12 @@ ul.icons li a.leetcode:hover {
   margin: 0 0 16px;
   line-height: 1.6;
 }
+#education .timeline {
+  margin: 30px;
+}
+#education .timeline-content {
+  padding: 0px;
+}
 
 
 /* Footer */
@@ -276,6 +294,7 @@ ul.icons li a.leetcode:hover {
   line-height: 1em;
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 #footer .copyright li {
   border-left: solid 1px #d4d4d4;
