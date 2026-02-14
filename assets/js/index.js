@@ -16,6 +16,13 @@ function downloadResume() {
 function toggleTheme() {
   let toggleButton = document.querySelector(".theme");
   toggleButton.classList.toggle("dark-theme");
+
+  let bodyTag = document.querySelector("body");
+  let introSection = document.querySelector(".intro");
+  let footerSection = document.querySelector("#footer");
+  bodyTag.classList.toggle("dark");
+  introSection.classList.toggle("dark");
+  footerSection.classList.toggle("dark");
 }
 
 //  Calculate years of experience
