@@ -300,6 +300,7 @@ p.institute {
 p.grade {
   margin-bottom: 40px;
 }
+
 /* Skills */
 .skills-block {
   display: flex;
@@ -327,6 +328,81 @@ p.grade {
 .skill-container p {
   font-size: 16px;
   margin-left: 10px;
+}
+
+/* Project */
+.carousel-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.arrow {
+  position: absolute;
+  border: none;
+  font-size: 30px;
+  color: #47A9B7;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+.arrow.left {
+  left: 0;
+}
+.arrow.right {
+  right: 0;
+}
+.project-card {
+  background: transparent;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 25px;
+  margin: 10px;
+  width: 350px;
+  text-align: center;
+}
+.project-card h3 {
+  margin-bottom: 10px;
+}
+.project-card ul {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.project-card ul li {
+  display: inline;
+  font-size: 12px;
+}
+.project-card ul li a {
+  color: #47A9B7;
+  margin: 10px;
+  text-decoration: none;
+}
+.project-card ul li a:hover {
+  text-decoration: underline;
+}
+.project-card img {
+  width: 280px;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #000;
+}
+.project-card .project-desc {
+  text-align: justify;
+  font-size: 14px;
+}
+.project-card .tech-stack {
+  text-align: justify;
+  margin-top: 8px;
+  font-size: 14px;
 }
 
 /* Contact */
@@ -419,7 +495,6 @@ p.grade {
   cursor: pointer;
   margin-left: 15px;
 }
-
 @keyframes slideDown {
   from {
     opacity: 0;

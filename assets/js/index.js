@@ -117,12 +117,6 @@ window.addEventListener("DOMContentLoaded", function () {
     setLoadingState(false); // re-enable buttons
     showAlert("Oops! Something went wrong.", "error");
   }
-
-  // form.addEventListener("submit", function (ev) {
-  //   ev.preventDefault();
-  //   var data = new FormData(form);
-  //   ajax(form.method, form.action, data, success, error);
-  // });
 });
 
 function ajax(method, url, data, success, error) {
@@ -139,3 +133,45 @@ function ajax(method, url, data, success, error) {
   };
   xhr.send(data);
 }
+
+// Project Carousel
+const carousel = document.querySelector(".carousel");
+const leftArrow = document.querySelector(".left");
+const rightArrow = document.querySelector(".right");
+
+function updateArrows() {
+  const scrollLeft = carousel.scrollLeft;
+  const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+
+  // Hide left arrow if at start
+  if (scrollLeft <= 0) {
+    leftArrow.style.display = "none";
+  } else {
+    leftArrow.style.display = "block";
+  }
+
+  // Hide right arrow if at end
+  if (scrollLeft >= maxScrollLeft - 1) {
+    rightArrow.style.display = "none";
+  } else {
+    rightArrow.style.display = "block";
+  }
+}
+
+// Scroll on arrow click
+rightArrow.addEventListener("click", () => {
+  carousel.scrollBy({ left: 400, behavior: "smooth" });
+});
+
+leftArrow.addEventListener("click", () => {
+  carousel.scrollBy({ left: -400, behavior: "smooth" });
+});
+
+// Update arrows on scroll
+carousel.addEventListener("scroll", updateArrows);
+
+// Update arrows on page load
+window.addEventListener("load", updateArrows);
+
+// Update arrows on resize (important!)
+window.addEventListener("resize", updateArrows);
