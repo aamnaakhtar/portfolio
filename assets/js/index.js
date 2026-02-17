@@ -21,6 +21,44 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("#navbar ul li a[href^='#']");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      navLinks.forEach((l) => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === `#${id}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    },
+    {
+      threshold: 0.65, // section must be 65% visible
+      rootMargin: "-40px 0px 0px 0px",
+    },
+  );
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+});
+
 function toggleTheme() {
   let toggleButton = document.querySelector(".theme");
   toggleButton.classList.toggle("dark-theme");

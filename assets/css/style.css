@@ -91,6 +91,10 @@ p a:hover {
   text-transform: uppercase;
   color: #fff;
 }
+#navbar a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
 #navbar button {
   background-color: #47A9B7;
 }
