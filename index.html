@@ -43,6 +43,12 @@
       </ul>
     </div>
 
+    <!-- Alert -->
+    <div id="form-alert" class="alert hidden">
+      <span id="alert-message"></span>
+      <button id="alert-close">&times;</button>
+    </div>
+
     <!-- Introduction Section -->
     <section class="introduction-container" id="intro">
       <div class="intro">
@@ -446,66 +452,49 @@
           action="https://formspree.io/f/mzbydjww"
           id="my-form"
         >
-          <div class="row gtr-uniform">
-            <div class="col-6 col-12-xsmall">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Name"
-                required
-              />
-            </div>
-            <div class="col-6 col-12-xsmall">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                required
-              />
-            </div>
-            <div class="col-12">
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                placeholder="Subject"
-                required
-              />
-            </div>
-            <div class="col-12">
-              <input
-                type="file"
-                name="attachment"
-                id="attachment"
-                placeholder="Attach PDF (optional)"
-                rows="6"
-              />
-              <p>Only PDF files upto 1MB are accepted.</p>
-            </div>
-            <div class="col-12">
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                placeholder="Subject"
-                required
-              />
-            </div>
-            <div class="col-12">
-              <ul class="actions">
-                <li>
-                  <input type="submit" class="primary" value="Send Message" />
-                </li>
-                <li><input type="reset" value="Reset Form" /></li>
-              </ul>
+          <div class="contact-container">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+              required
+            />
+            <input
+              type="file"
+              name="attachment"
+              id="attachment"
+              placeholder="Attach PDF (optional)"
+            />
+            <p>Only PDF files upto 1MB are accepted.</p>
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <div class="action">
+              <button type="submit" class="submit button">Send Message</button>
+              <button type="reset" class="reset button">Reset Form</button>
             </div>
           </div>
         </form>
       </div>
-
-      <div id="status"></div>
     </section>
 
     <!-- Footer -->

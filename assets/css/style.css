@@ -38,9 +38,10 @@ p {
   text-align: justify;
 }
 h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 20px;
   color: #47A9B7;
+  text-align: center;
 }
 h3 {
   font-size: 24px;
@@ -327,6 +328,109 @@ p.grade {
   font-size: 16px;
   margin-left: 10px;
 }
+
+/* Contact */
+#contact p {
+  text-align: center;
+}
+.contact-container {
+  width: 600px;
+  margin: 0 auto;
+}
+.contact-container p {
+  font-size: 12px;
+}
+.contact-container input, .contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-top: 20px;
+  background-color: transparent;
+}
+.contact-container ::placeholder, .contact-container textarea::placeholder {
+  color: #999;
+  font-family: "Lato", "sans-serif";
+  font-size: 16px;
+}
+.contact-container textarea {
+  resize: vertical;
+  height: 120px;
+}
+.contact-container .action {
+  display: flex;
+  justify-content:center;
+  gap: 20px;
+}
+.contact-container button {
+  background-color: #47A9B7;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  height: 40px;
+  margin-top: 20px;
+}
+.contact-container button:hover {
+  background-color: #2b8694;
+}
+.contact-container button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+
+/* Alert */
+.alert {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 300px;
+  max-width: 90%;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  z-index: 9999;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  animation: slideDown 0.3s ease;
+}
+.alert.success {
+  background-color: #3aa753;
+}
+.alert.error {
+  background-color: #ee3f51;
+}
+.alert.hidden {
+  display: none;
+}
+#alert-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
 /* Footer */
 section#footer {
   margin: 0;
