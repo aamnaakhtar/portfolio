@@ -32,9 +32,6 @@ body.dark {
 section {
   margin: 30px;
 }
-a {
-  color: #47A9B7;
-}
 p {
   font-size: 16px;
   line-height: 1.5;
@@ -43,6 +40,7 @@ p {
 h2 {
   font-size: 30px;
   margin-bottom: 10px;
+  color: #47A9B7;
 }
 h3 {
   font-size: 24px;
@@ -53,7 +51,18 @@ h4 {
 h5 {
   font-size: 18px;
 }
-
+h3 a {
+  color: gray;
+}
+h3 a:hover {
+  font-size: 25px;
+}
+p a {
+  color: gray;
+}
+p a:hover {
+  font-size: 17px;
+}
 
 /* Navbar */
 #navbar { 
@@ -284,7 +293,12 @@ ul.icons li a.leetcode:hover {
 #education .timeline-content {
   padding: 0px;
 }
-
+p.institute {
+  margin-bottom: 4px;
+}
+p.grade {
+  margin-bottom: 40px;
+}
 /* Skills */
 .skills-block {
   display: flex;
