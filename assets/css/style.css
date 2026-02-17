@@ -167,7 +167,7 @@ p a:hover {
   color: #fff;
   text-align: center;
 }
-.intro.dark {
+body.dark .intro {
   background: linear-gradient(45deg, #1f2937, #47A9B7);
 }
 .intro h1 {
@@ -517,7 +517,7 @@ section#footer {
   overflow: hidden;
   padding: 4em 0 2em 0;
 }
-#footer.dark {
+body.dark #footer {
   background: #1f2937;
   color: #c0c0c0;
 }

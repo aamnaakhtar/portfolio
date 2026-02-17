@@ -13,16 +13,26 @@ function downloadResume() {
   document.body.removeChild(link);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
+});
+
 function toggleTheme() {
   let toggleButton = document.querySelector(".theme");
   toggleButton.classList.toggle("dark-theme");
 
-  let bodyTag = document.querySelector("body");
-  let introSection = document.querySelector(".intro");
-  let footerSection = document.querySelector("#footer");
+  let bodyTag = document.body;
   bodyTag.classList.toggle("dark");
-  introSection.classList.toggle("dark");
-  footerSection.classList.toggle("dark");
+
+  if (bodyTag.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 }
 
 //  Calculate years of experience
