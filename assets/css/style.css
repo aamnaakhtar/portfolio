@@ -105,22 +105,22 @@ p a:hover {
   background-image: url('../../images/download-hover.png');
 }
 .theme {
-  background-image: url('../../images/dark-mode.png');
-  border: none;
-  width: 16px;
-  height: 16px;
-}
-.theme:hover {
-  background-image: url('../../images/dark-mode-hover.png');
-}
-.theme.dark-theme {
   background-image: url('../../images/light-mode.png');
   border: none;
   width: 16px;
   height: 16px;
 }
-.theme.dark-theme:hover {
+.theme:hover {
   background-image: url('../../images/light-mode-hover.png');
+}
+.theme.dark-theme {
+  background-image: url('../../images/dark-mode.png');
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+.theme.dark-theme:hover {
+  background-image: url('../../images/dark-mode-hover.png');
 }
 #navbar ul li a:hover {
   color: #fff;
