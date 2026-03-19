@@ -304,6 +304,12 @@ p.institute {
 p.grade {
   margin-bottom: 40px;
 }
+.exp {
+  margin-left: 20px;
+}
+.exp li {
+  margin: 8px;
+}
 
 /* Skills */
 .skills-block {
@@ -344,7 +350,7 @@ p.grade {
 }
 .carousel {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -365,13 +371,16 @@ p.grade {
   right: 0;
 }
 .project-card {
-  background: transparent;
-  border: 2px solid #ccc;
+  background: #fafafa;
+  border: 2px solid #47A9B7;
   border-radius: 5px;
   padding: 25px;
-  margin: 10px;
-  width: 350px;
+  margin: 10px 0;
+  width: 404px;
   text-align: center;
+}
+body.dark .project-card {
+  background: #1f2937;
 }
 .project-card h3 {
   margin-bottom: 10px;
@@ -393,18 +402,19 @@ p.grade {
   text-decoration: underline;
 }
 .project-card img {
-  width: 280px;
-  height: 200px;
-  border-radius: 5px;
+  width: 350px;
+  aspect-ratio: 128 / 75;
   margin-bottom: 15px;
   background-color: #000;
+  border: 1px solid #47A9B7;
+  border-radius: 5px;
 }
 .project-card .project-desc {
   text-align: justify;
   font-size: 14px;
 }
 .project-card .tech-stack {
-  text-align: justify;
+  text-align: left;
   margin-top: 8px;
   font-size: 14px;
 }
@@ -546,3 +556,4 @@ body.dark #footer {
 #footer .copyright li a {
   color: inherit;
 }
+
