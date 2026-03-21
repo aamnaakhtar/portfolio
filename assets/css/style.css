@@ -66,6 +66,9 @@ p a:hover {
 }
 
 /* Navbar */
+#menu-toggle {
+  display: none;
+}
 #navbar { 
   display: flex;
   justify-content: space-around;
@@ -306,6 +309,7 @@ p.grade {
 }
 .exp {
   margin-left: 20px;
+  text-align: justify;
 }
 .exp li {
   margin: 8px;
@@ -472,7 +476,6 @@ body.dark .project-card {
   cursor: not-allowed;
 }
 
-
 /* Alert */
 .alert {
   position: fixed;
@@ -557,3 +560,136 @@ body.dark #footer {
   color: inherit;
 }
 
+/* Mobile and Tablet */
+@media (max-width: 1024px) {
+  h3 {
+    font-size: 18px;
+  }
+  p, ul.exp {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+  .timeline-content {
+    padding-right: 0;
+  }
+  .contact-container {
+    width: 90%;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  h2 {
+    font-size: 26px;
+  }
+  .intro {
+    height: 535px;
+    margin: auto;
+  }
+  .detail {
+    margin: 10px 15px;
+  }
+  .timeline {
+    padding-right: 15px;
+  }
+  section {
+    margin: 20px 10px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  section {
+    margin: 10px;
+  }
+  .detail {
+    margin: 20px 10px;
+  }
+  .timeline {
+    padding-left: 19px;
+    padding-right: 10px;
+  }
+  .timeline::before {
+    left: 5px;
+  }
+  .timeline-dot {
+    left: -18px;
+  }
+  .skills-block {
+    gap: 8px;
+  }
+  .skill-container {
+    width: 110px;
+    height: auto;
+    padding: 0;
+  }
+  .skill-container img {
+    width: 24px;
+  }
+  .skill-container p {
+    font-size: 12px;
+  }
+  .project-card {
+    width: 304px;
+  }
+  .project-card img {
+    width: 250px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* Custom */
+@media (max-width: 600px) {
+  .introduction-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 740px) {
+  #navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+  }
+  #navbar ul {
+    text-align: left;
+  }
+  #navbar ul li {
+    display: inline-block;
+    margin: 5px 0 5px 20px;
+  }
+  #menu-toggle {
+    display: block;
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  #nav-links {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #47A9B7;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+  #nav-links.show {
+    display: flex;
+  }
+  #nav-links li {
+    display: block;
+    margin: 10px 0;
+  }
+  #nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

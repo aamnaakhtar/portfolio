@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html>
+<html lang="en">
   <head>
     <title>Aamna Akhtar</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
@@ -14,34 +14,27 @@
   </head>
   <body class="is-preload">
     <!-- Navbar -->
-    <div id="navbar">
-      <ul>
+    <nav id="navbar">
+      <!-- LEFT: Toggle (visible only on mobile/tablet) -->
+      <button id="menu-toggle">&#9776;</button>
+      <ul id="nav-links">
         <li><a href="#intro">Home</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
-        <!-- <li><a href="#accomplishments">Accomplishments</a></li> -->
         <li><a href="#contact">Contact Me</a></li>
       </ul>
-      <ul>
+      <ul id="nav-actions">
         <li>
-          <a href="Resume - Aamna.pdf" class="resume" target="_blank">Resume</a
-          ><button
-            title="Download Resume"
-            onclick="downloadResume()"
-            class="icon download"
-          ></button>
+          <a href="Aamna-Resume.pdf" class="resume" target="_blank">Resume</a>
+          <button onclick="downloadResume()" class="icon download"></button>
         </li>
         <li>
-          <button
-            title="Change Theme"
-            onclick="toggleTheme()"
-            class="theme"
-          ></button>
+          <button onclick="toggleTheme()" class="theme"></button>
         </li>
       </ul>
-    </div>
+    </nav>
 
     <!-- Alert -->
     <div id="form-alert" class="alert hidden">
@@ -56,7 +49,7 @@
           <span class="image avatar"
             ><img src="images/mypicture.jpg" alt="Photo of Aamna"
           /></span>
-          <h1 id="name">Aamna Akhtar</h1>
+          <h1>Aamna Akhtar</h1>
           <p>Software Developer</p>
         </header>
         <hr />
@@ -73,6 +66,7 @@
                 href="https://www.linkedin.com/in/aamna-akhtar/"
                 class="icon linkedin"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="LinkedIn"
                 aria-label="LinkedIn"
               ></a>
@@ -82,6 +76,7 @@
                 href="https://github.com/aamnaakhtar"
                 class="icon github"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="Github"
                 aria-label="Github"
               ></a>
@@ -91,6 +86,7 @@
                 href="https://leetcode.com/u/aamnaakhtar/"
                 class="icon leetcode"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="LeetCode"
                 aria-label="LeetCode"
               ></a>
@@ -100,6 +96,7 @@
                 href="https://www.hackerrank.com/aamnaakhtar7"
                 class="icon hackerrank"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="HackerRank"
                 aria-label="HackerRank"
               ></a>
@@ -109,6 +106,7 @@
                 href="https://medium.com/@aamnaakhtar"
                 class="icon medium"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="Medium"
                 aria-label="Medium"
               ></a>
@@ -118,6 +116,7 @@
                 href="https://x.com/AamnaAkhtar5"
                 class="icon x-twitter"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="X or Twitter"
                 aria-label="X or Twitter"
               ></a>
@@ -134,8 +133,8 @@
           learning new technologies. I am dedicated to delivering high-quality
           code and collaborating effectively with teams to achieve project
           goals.<br /><br />
-          I am currently working in a saas-based - product-based environment
-          where I have the opportunity to contribute to real-world enterprise
+          I am currently working in a SaaS product-based environment where I
+          have the opportunity to contribute to real-world enterprise
           applications. I thrive in dynamic and fast-paced settings, and I am
           always eager to take on new challenges that allow me to grow both
           personally and professionally.<br /><br />
@@ -212,10 +211,12 @@
             <h4>Associate Software Engineer</h4>
             <h5>Feb 2023 – Present</h5>
             <ul class="exp">
-              <li>Contributing to UI rebranding, WCAG accessibility compliance,
-              feature development, CI/CD issue resolution, and Selenium
-              automation while collaborating with cross-functional teams.</li>
-            </p>
+              <li>
+                Contributing to UI rebranding, WCAG accessibility compliance,
+                feature development, CI/CD issue resolution, and Selenium
+                automation while collaborating with cross-functional teams.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -235,6 +236,7 @@
                 <a
                   href="https://aamnaakhtar.github.io/to-do-list/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   >View Project</a
                 >
               </li>
@@ -242,6 +244,7 @@
                 <a
                   href="https://github.com/aamnaakhtar/to-do-list"
                   target="_blank"
+                  rel="noopener noreferrer"
                   >Source Code</a
                 >
               </li>
@@ -269,6 +272,7 @@
                 <a
                   href="https://aamnaakhtar.github.io/utility-hub/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   >View Project</a
                 >
               </li>
@@ -276,6 +280,7 @@
                 <a
                   href="https://github.com/aamnaakhtar/utility-hub"
                   target="_blank"
+                  rel="noopener noreferrer"
                   >Source Code</a
                 >
               </li>
@@ -372,27 +377,27 @@
         <h3>Languages</h3>
         <div class="skills-block">
           <div class="skill-container">
-            <img src="../images/c.png" />
+            <img src="images/c.png" />
             <p>C Language</p>
           </div>
           <div class="skill-container">
-            <img src="../images/c++.png" />
+            <img src="images/c++.png" />
             <p>C++</p>
           </div>
           <div class="skill-container">
-            <img src="../images/csharp.png" />
+            <img src="images/csharp.png" />
             <p>C#</p>
           </div>
           <div class="skill-container">
-            <img src="../images/javascript.png" />
+            <img src="images/javascript.png" />
             <p>JavaScript</p>
           </div>
           <div class="skill-container">
-            <img src="../images/typescript.png" />
+            <img src="images/typescript.png" />
             <p>TypeScript</p>
           </div>
           <div class="skill-container">
-            <img src="../images/python.png" />
+            <img src="images/python.png" />
             <p>Python</p>
           </div>
         </div>
@@ -403,31 +408,31 @@
         <h3>Frontend</h3>
         <div class="skills-block">
           <div class="skill-container">
-            <img src="../images/html.png" />
+            <img src="images/html.png" />
             <p>HTML</p>
           </div>
           <div class="skill-container">
-            <img src="../images/css.png" />
+            <img src="images/css.png" />
             <p>CSS</p>
           </div>
           <div class="skill-container">
-            <img src="../images/sass.png" />
+            <img src="images/sass.png" />
             <p>SCSS</p>
           </div>
           <div class="skill-container">
-            <img src="../images/ember.png" />
+            <img src="images/ember.png" />
             <p>Ember JS</p>
           </div>
           <div class="skill-container">
-            <img src="../images/react.png" />
+            <img src="images/react.png" />
             <p>React JS</p>
           </div>
           <!-- <div class="skill-container">
-            <img src="../images/bootstrap.png" />
+            <img src="images/bootstrap.png" />
             <p>Bootstrap</p>
           </div>
           <div class="skill-container">
-            <img src="../images/tailwind.png" />
+            <img src="images/tailwind.png" />
             <p>Tailwind CSS</p>
           </div> -->
         </div>
@@ -438,11 +443,11 @@
         <h3>Databases</h3>
         <div class="skills-block">
           <div class="skill-container">
-            <img src="../images/mysql.png" />
+            <img src="images/mysql.png" />
             <p>MySQL</p>
           </div>
           <div class="skill-container">
-            <img src="../images/postgresql.png" />
+            <img src="images/postgresql.png" />
             <p>PostgreSQL</p>
           </div>
         </div>
@@ -453,7 +458,7 @@
         <h3>Automation Testing</h3>
         <div class="skills-block">
           <div class="skill-container">
-            <img src="../images/selenium.png" />
+            <img src="images/selenium.png" />
             <p>Selenium</p>
           </div>
         </div>
@@ -464,31 +469,31 @@
         <h3>Development Tools</h3>
         <div class="skills-block">
           <div class="skill-container">
-            <img src="../images/git.png" />
+            <img src="images/git.png" />
             <p>Git</p>
           </div>
           <div class="skill-container">
-            <img src="../images/github.png" />
+            <img src="images/github.png" />
             <p>GitHub</p>
           </div>
           <div class="skill-container">
-            <img src="../images/sourcetree.png" />
+            <img src="images/sourcetree.png" />
             <p>SourceTree</p>
           </div>
           <div class="skill-container">
-            <img src="../images/npm.png" />
+            <img src="images/npm.png" />
             <p>npm</p>
           </div>
           <div class="skill-container">
-            <img src="../images/vscode.png" />
+            <img src="images/vscode.png" />
             <p>VS Code</p>
           </div>
           <div class="skill-container">
-            <img src="../images/visualstudio.png" />
+            <img src="images/visualstudio.png" />
             <p>Visual Studio</p>
           </div>
           <div class="skill-container">
-            <img src="../images/jira.png" />
+            <img src="images/jira.png" />
             <p>Jira</p>
           </div>
         </div>
@@ -499,39 +504,39 @@
         <h3>AI & Productivity</h3>
         <div class="skills-block">
           <div class="skill-container">
-            <img src="../images/chatgpt.png" />
+            <img src="images/chatgpt.png" />
             <p>ChatGPT</p>
           </div>
           <div class="skill-container">
-            <img src="../images/claude.png" />
+            <img src="images/claude.png" />
             <p>Claude</p>
           </div>
           <div class="skill-container">
-            <img src="../images/gemini.png" />
+            <img src="images/gemini.png" />
             <p>Gemini</p>
           </div>
           <div class="skill-container">
-            <img src="../images/copilot.png" />
+            <img src="images/copilot.png" />
             <p>Copilot</p>
           </div>
           <div class="skill-container">
-            <img src="../images/cline.png" />
+            <img src="images/cline.png" />
             <p>Cline</p>
           </div>
           <div class="skill-container">
-            <img src="../images/mcp.png" />
+            <img src="images/mcp.png" />
             <p>MCP</p>
           </div>
           <div class="skill-container">
-            <img src="../images/aiagent.png" />
+            <img src="images/aiagent.png" />
             <p>AI Agents</p>
           </div>
           <div class="skill-container">
-            <img src="../images/genai.png" />
+            <img src="images/genai.png" />
             <p>Generative AI</p>
           </div>
           <div class="skill-container">
-            <img src="../images/ml.png" />
+            <img src="images/ml.png" />
             <p>Machine Learning</p>
           </div>
         </div>
@@ -542,19 +547,19 @@
         <h3>Core CS</h3>
         <div class="skills-block">
           <div class="skill-container">
-            <!-- <img src="../images/dbms.png" /> -->
+            <!-- <img src="images/dbms.png" /> -->
             <p>DBMS</p>
           </div>
           <div class="skill-container">
-            <!-- <img src="../images/oops.png" /> -->
+            <!-- <img src="images/oops.png" /> -->
             <p>OOPs</p>
           </div>
           <div class="skill-container">
-            <!-- <img src="../images/dsa.png" /> -->
+            <!-- <img src="images/dsa.png" /> -->
             <p>DSA</p>
           </div>
           <div class="skill-container">
-            <!-- <img src="../images/system-design.png" /> -->
+            <!-- <img src="images/system-design.png" /> -->
             <p>System Design</p>
           </div>
         </div>
@@ -649,10 +654,10 @@
               name="attachment"
               id="attachment"
               placeholder="Attach PDF (optional)"
+              accept="application/pdf"
             />
             <p>Only PDF files upto 1MB are accepted.</p>
             <textarea
-              type="text"
               name="message"
               id="message"
               placeholder="Message"

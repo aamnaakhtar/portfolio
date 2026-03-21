@@ -3,8 +3,8 @@ function downloadResume() {
   let link = document.createElement("a");
 
   // 2. Set the link's attributes
-  link.href = "Resume - Aamna.pdf"; // URL of the file
-  link.download = "Resume - Aamna.pdf"; // Suggested filename
+  link.href = "Aamna-Resume.pdf"; // URL of the file
+  link.download = "Aamna-Resume.pdf"; // Suggested filename
   link.style.display = "none"; // Hide the link
 
   // 3. Append the link to the body, simulate a click, and remove it
@@ -88,6 +88,13 @@ if (!hasCompletedYear) {
   years--;
 }
 document.querySelector(".yoe").textContent = years + "+";
+
+const toggleBtn = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggleBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
 
 window.addEventListener("DOMContentLoaded", function () {
   var form = document.querySelector("#my-form");
