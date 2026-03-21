@@ -1,338 +1,692 @@
 <!doctype html>
 
-<html>
+<html lang="en">
   <head>
-    <title>Aamna's Portfolio</title>
-    <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
-    <link rel="shortcut icon" href="images/favicon.png?v=2" />
+    <title>Aamna Akhtar</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="is-preload">
-    <!-- Header -->
-    <section id="header">
-      <header>
-        <span class="image avatar"
-          ><img src="images/mypicture.jpg" alt=""
-        /></span>
-        <h1 id="logo">Aamna Akhtar</h1>
-        <p>A passionate Computer Science Engineer.</p>
-      </header>
-      <nav id="nav">
-        <ul>
-          <li><a href="#one" class="active">About Me</a></li>
-          <li><a href="#two">Skills</a></li>
-          <!--li><a href="#five">Projects</a></li-->
-          <li><a href="#three">A Few Accomplishments</a></li>
-          <li><a href="#four">Contact Me</a></li>
-        </ul>
-      </nav>
-      <footer>
-        <ul class="icons">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/aamna-akhtar/"
-              class="icon linkedin"
-              target="_blank"
-              title="LinkedIn"
-              aria-label="LinkedIn"
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/aamnaakhtar"
-              class="icon github"
-              target="_blank"
-              title="Github"
-              aria-label="Github"
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://leetcode.com/u/aamnaakhtar/"
-              class="icon leetcode"
-              target="_blank"
-              title="LeetCode"
-              aria-label="LeetCode"
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.hackerrank.com/aamnaakhtar7"
-              class="icon hackerrank"
-              target="_blank"
-              title="HackerRank"
-              aria-label="HackerRank"
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://medium.com/@aamnaakhtar"
-              class="icon medium"
-              target="_blank"
-              title="Medium"
-              aria-label="Medium"
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://x.com/AamnaAkhtar5"
-              class="icon x-twitter"
-              target="_blank"
-              title="X or Twitter"
-              aria-label="X or Twitter"
-            ></a>
-          </li>
-        </ul>
-      </footer>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <!-- LEFT: Toggle (visible only on mobile/tablet) -->
+      <button id="menu-toggle">&#9776;</button>
+      <ul id="nav-links">
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+      <ul id="nav-actions">
+        <li>
+          <a href="Aamna-Resume.pdf" class="resume" target="_blank">Resume</a>
+          <button onclick="downloadResume()" class="icon download"></button>
+        </li>
+        <li>
+          <button onclick="toggleTheme()" class="theme"></button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Alert -->
+    <div id="form-alert" class="alert hidden">
+      <span id="alert-message"></span>
+      <button id="alert-close">&times;</button>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="introduction-container" id="intro">
+      <div class="intro">
+        <header>
+          <span class="image avatar"
+            ><img src="images/mypicture.jpg" alt="Photo of Aamna"
+          /></span>
+          <h1>Aamna Akhtar</h1>
+          <p>Software Developer</p>
+        </header>
+        <hr />
+        <div class="experience">
+          <h1 class="yoe"></h1>
+          <p>Years of Experience</p>
+        </div>
+        <hr />
+        <h3>Let's connect!</h3>
+        <footer>
+          <ul class="icons">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/aamna-akhtar/"
+                class="icon linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                aria-label="LinkedIn"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/aamnaakhtar"
+                class="icon github"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Github"
+                aria-label="Github"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://leetcode.com/u/aamnaakhtar/"
+                class="icon leetcode"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LeetCode"
+                aria-label="LeetCode"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.hackerrank.com/aamnaakhtar7"
+                class="icon hackerrank"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="HackerRank"
+                aria-label="HackerRank"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@aamnaakhtar"
+                class="icon medium"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Medium"
+                aria-label="Medium"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/AamnaAkhtar5"
+                class="icon x-twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="X or Twitter"
+                aria-label="X or Twitter"
+              ></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+      <div class="detail">
+        <h2>About Me</h2>
+        <p>
+          I am a software engineer with a passion for creating innovative
+          solutions. With experience in various programming languages and
+          frameworks, I enjoy tackling complex problems and continuously
+          learning new technologies. I am dedicated to delivering high-quality
+          code and collaborating effectively with teams to achieve project
+          goals.<br /><br />
+          I am currently working in a SaaS product-based environment where I
+          have the opportunity to contribute to real-world enterprise
+          applications. I thrive in dynamic and fast-paced settings, and I am
+          always eager to take on new challenges that allow me to grow both
+          personally and professionally.<br /><br />
+          What excites me most about engineering is problem solving. I enjoy
+          breaking down complex requirements, thinking through edge cases, and
+          turning ideas into practical solutions that improve user experience
+          and product quality.<br /><br />
+          I’m a strong believer in continuous learning. Technology evolves every
+          day, and I strive to grow with it, exploring better patterns, better
+          tools, and better ways to collaborate. The mindset of staying curious
+          and always improving drives both my professional and personal journey.
+        </p>
+      </div>
     </section>
+    <hr />
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Main -->
-      <div id="main">
-        <!-- One -->
-        <section id="one">
-          <!--div class="image main" data-position="center">
-									<img src="images/header.jpg" alt="" />
-								</div-->
-          <div class="container">
-            <header class="major">
-              <h2>Welcome to my Portfolio!</h2>
-              <p>About Me</p>
-            </header>
-            <!--<h3>About Me</h3>-->
-            <p>
-              Hello! My name is Aamna Akhtar. I am a hard working and passionate
-              engineering student at Integral University, Lucknow, specialised
-              in Computer Science and Engineering with an overall aggregate of
-              89.67% up till now. I have completed online certification courses
-              on Python Programming and Machine Learning. <br />
-              My current goal is to get placed in a reputated IT Industry in
-              India or in Abroad. <br />
-              Beside this, I am very much interested in reading novels, mostly
-              non-fictional that includes self-growth and personality
-              development. Reading novels has immensely helped me in improving
-              my communication skills and vocabulary. It is because of my
-              interest in reading that has inculcated in me a habit of writing
-              qoutes, poems and stories.
-            </p>
-            <ul class="actions">
+    <!-- Experience Section -->
+    <section class="timeline-section" id="experience">
+      <h2 id="two">Career Snapshot</h2>
+      <div class="timeline-content">
+        <h3>
+          <a
+            href="https://www.linkedin.com/company/replicon/posts/?feedView=all"
+          >
+            Deltek | Replicon, Bangalore (Remote)
+          </a>
+        </h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <h4>Software Engineer – Intern</h4>
+            <h5>July 2022 – Jan 2023</h5>
+            <ul class="exp">
               <li>
-                <a href="Resume - Aamna.pdf" target="_blank"
-                  ><input type="submit" class="primary" value="Resume"
-                /></a>
-                <button onclick="downloadResume()">
-                  <i class="icon solid fa-download"></i>
-                </button>
+                Led end-to-end UI rebranding of the Gen3 application, enhancing
+                user experience and modernizing the interface.
+              </li>
+              <li>
+                Implemented WCAG accessibility standards, achieving ~80%
+                compliance and significantly improving usability for users with
+                disabilities.
+              </li>
+              <li>
+                Reduced customer-reported incident backlog by 50% by proactively
+                resolving critical bugs and performance issues under tight
+                deadlines.
+              </li>
+              <li>
+                Designed and delivered scalable product features, ensuring
+                maintainability and improved overall system performance.
+              </li>
+              <li>
+                Diagnosed and resolved CI/CD pipeline failures, increasing
+                deployment stability and release efficiency.
+              </li>
+              <li>
+                Developed automation test scripts using Selenium, improving test
+                coverage and reducing manual QA effort.
+              </li>
+              <li>
+                Resolved 400+ Dependabot alerts, strengthening application
+                security and minimizing vulnerabilities.
+              </li>
+              <li>
+                Leveraged AI tools (e.g., Claude) to reduce debugging time by
+                ~80%, accelerating issue resolution and development cycles.
               </li>
             </ul>
           </div>
-        </section>
 
-        <!-- Two -->
-        <section id="two">
-          <div class="container">
-            <h2>Skills</h2>
-            <h4>Technical Skills</h4>
-            <ul class="feature-icons">
-              <li class="icon solid fa-copyright">
-                Working Proficiency in <b>C</b> and <b>C++</b>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h4>Associate Software Engineer</h4>
+            <h5>Feb 2023 – Present</h5>
+            <ul class="exp">
+              <li>
+                Contributing to UI rebranding, WCAG accessibility compliance,
+                feature development, CI/CD issue resolution, and Selenium
+                automation while collaborating with cross-functional teams.
               </li>
-              <li class="icon solid fa-code">
-                Limited Proficiency in <b>Python</b>
-              </li>
-              <li class="icon solid fa-database">Database - <b>SQL</b></li>
-              <li class="icon solid fa-file-code">
-                Web Development - <b>HTML</b> and <b>CSS</b>
-              </li>
-            </ul>
-
-            <h4>Other Skills</h4>
-            <ul class="feature-icons">
-              <li class="icon solid fa-question">Problem Solving Skills</li>
-              <li class="icon solid fa-comments">
-                Effective Communication Skills
-              </li>
-              <li class="icon solid fa-sitemap">Leadership Quality</li>
-              <li class="icon solid fa-lightbulb">
-                Creative and Critical Thinking
-              </li>
-              <li class="icon solid fa-clock">Time Management</li>
-              <li class="icon solid fa-fist-raised">Team Work</li>
             </ul>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
+    <hr />
 
-        <!-- Five-->
-        <!--		<section id="five">
-							<div class="container">
-								<h2>Projects</h2>
-							</div>
-						</section>
-					-->
-        <!-- Three -->
-        <section id="three">
-          <div class="container">
-            <h3>A Few Accomplishments</h3>
-            <div class="features">
-              <article>
-                <a href="#" class="image"
-                  ><img src="images/course.jpg" alt=""
-                /></a>
-                <div class="inner">
-                  <h4>Certification Courses</h4>
-                  <p>
-                    1. A Practical Approach to Python Programming <br />
-                    2. Machine Learning + Artificial Intelligence<br />
-                    3. Machine Learning A-Z: Hands-On Python & R in Data Science
-                  </p>
-                </div>
-              </article>
-              <article>
-                <a href="#" class="image"
-                  ><img src="images/seminar.jpg" alt=""
-                /></a>
-                <div class="inner">
-                  <h4>Workshops and Seminars Attended</h4>
-                  <li>
-                    IEEE International Conference on Computational and
-                    Characterization Technique in Engineering and Science, 2018
-                  </li>
-                  <li>
-                    Awareness session on Cyber Security in Connected World
-                  </li>
-                  <li>
-                    Completed 6 days session on Student Development Program and
-                    secured 76%.
-                  </li>
-                  <li>Webinar on Jobs for the Next Five Years</li>
-                  <li>
-                    Webinar on Importance of Coding and Programming for Career
-                    in IT Industry
-                  </li>
-                </div>
-              </article>
-              <article>
-                <a href="#" class="image"
-                  ><img src="images/achievement.jpg" alt=""
-                /></a>
-                <div class="inner">
-                  <h4>Some Achievements</h4>
-
-                  <li>
-                    Got Certificate of Achievement for securing 86% in E-Quiz on
-                    COVID-19 Awareness Quiz.
-                  </li>
-                  <li>Participated in a couple of Open Mic Events.</li>
-                  <li>
-                    Won Second prize in a Poster Making Competition, 2015.
-                  </li>
-                  <li>
-                    Won Best Idea and Style Award and a Gold Medal for a Project
-                    at District level, 2013.
-                  </li>
-                  <li>
-                    Won a Bronze Medal in International Olympaid for Science in
-                    2013 and qualified for National Level as well.
-                  </li>
-                  <li>
-                    Qualified for International Olympaid for Mathematics, 2013
-                  </li>
-                </div>
-              </article>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="carousel-wrapper">
+        <button class="arrow left">&#10094;</button>
+        <div class="carousel">
+          <div class="project-card">
+            <h3>To Do List App</h3>
+            <ul class="project-links">
+              <li>
+                <a
+                  href="https://aamnaakhtar.github.io/to-do-list/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Project</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/aamnaakhtar/to-do-list"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Source Code</a
+                >
+              </li>
+            </ul>
+            <div class="project-img">
+              <img
+                src="images/to-do-list.png"
+                alt="Snapshot of the To Do List App"
+              />
+            </div>
+            <div class="project-desc">
+              A task management application built using React.js that allows
+              users to add, edit, delete, and manage tasks efficiently.
+              Implemented React Hooks for state management and integrated
+              localStorage to ensure data persistence across sessions. Designed
+              with a clean component structure and user-friendly interface to
+              demonstrate effective state handling and UI responsiveness.
+            </div>
+            <div class="tech-stack">Tech Stack: React JS</div>
+          </div>
+          <div class="project-card">
+            <h3>Utility Hub</h3>
+            <ul class="project-links">
+              <li>
+                <a
+                  href="https://aamnaakhtar.github.io/utility-hub/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Project</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/aamnaakhtar/utility-hub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Source Code</a
+                >
+              </li>
+            </ul>
+            <div class="project-img">
+              <img
+                src="images/utility-hub.png"
+                alt="Snapshot of Utility Hub Page"
+              />
+            </div>
+            <div class="project-desc">
+              A modern, responsive Utility Hub built using Ember.js that
+              provides quick access to essential web tools like a To-Do List, QR
+              Code Generator, Currency Converter and more — all in one place.
+            </div>
+            <div class="tech-stack">
+              Tech Stack: Ember JS (Homepage), JavaScript (Individual Apps)
             </div>
           </div>
-        </section>
-
-        <!-- Four -->
-        <section id="four">
-          <div class="container">
-            <h3>Contact Me</h3>
-            <p>Feel free to get in touch. Cheers!</p>
-            <form
-              method="post"
-              action="https://formspree.io/f/mzbydjww"
-              id="my-form"
-            >
-              <div class="row gtr-uniform">
-                <div class="col-6 col-12-xsmall">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Name"
-                    required
-                  />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-                <div class="col-12">
-                  <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </div>
-                <div class="col-12">
-                  <textarea
-                    name="message"
-                    id="message"
-                    placeholder="Message"
-                    rows="6"
-                    required
-                  ></textarea>
-                </div>
-                <div class="col-12">
-                  <ul class="actions">
-                    <li>
-                      <input
-                        type="submit"
-                        class="primary"
-                        value="Send Message"
-                      />
-                    </li>
-                    <li><input type="reset" value="Reset Form" /></li>
-                  </ul>
-                </div>
-              </div>
-            </form>
+          <div class="project-card">
+            <h3>Fake News Detection System</h3>
+            <ul class="project-links">
+              <li>
+                <a
+                  href="https://colab.research.google.com/github/aamnaakhtar/Fake-News-Detection/blob/main/MinorProject.ipynb#scrollTo=4nCNy1JrGxdH"
+                  >View Project</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/aamnaakhtar/Fake-News-Detection"
+                  >Source Code</a
+                >
+              </li>
+            </ul>
+            <div class="project-img">
+              <img src="images/fake-news.png" alt="Snapshot of Result of App" />
+            </div>
+            <div class="project-desc">
+              A machine learning application that classifies news as real or
+              fake. With misinformation spreading rapidly on social media, the
+              project aims to provide a reliable way to verify news content. It
+              analyzes articles and predicts their authenticity with accuracy.
+              The goal is to help users make informed decisions and reduce the
+              spread of false information.
+            </div>
+            <div class="tech-stack">Tech Stack: Python, Machine Learning</div>
           </div>
+          <!-- <div class="project-card">
+            <h3>Interactive Game Suite</h3>
+            <ul class="project-links">
+              <li><a href="#">View Project</a></li>
+              <li><a href="#">Source Code</a></li>
+            </ul>
+            <div class="project-img">
+              <img src="" alt="" />
+            </div>
+            <div class="project-desc">
+              A modern productivity tool that helps users manage tasks with
+              features such as task creation, completion tracking, editing,
+              deletion, and local storage persistence. Designed with a clean
+              interface and intuitive interactions for a smooth user experience.
+            </div>
+            <div class="tech-stack">Tech Stack: React JS</div>
+          </div>
+          <div class="project-card">
+            <h3>To Do List App</h3>
+            <ul class="project-links">
+              <li><a href="#">View Project</a></li>
+              <li><a href="#">Source Code</a></li>
+            </ul>
+            <div class="project-img">
+              <img src="" alt="" />
+            </div>
+            <div class="project-desc">
+              A modern productivity tool that helps users manage tasks with
+              features such as task creation, completion tracking, editing,
+              deletion, and local storage persistence. Designed with a clean
+              interface and intuitive interactions for a smooth user experience.
+            </div>
+            <div class="tech-stack">Tech Stack: React JS</div>
+          </div> -->
+        </div>
+        <button class="arrow right">&#10095;</button>
+      </div>
+    </section>
+    <hr />
 
-          <div id="status"></div>
-        </section>
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <!-- Languages -->
+      <div class="skills-group">
+        <h3>Languages</h3>
+        <div class="skills-block">
+          <div class="skill-container">
+            <img src="images/c.png" />
+            <p>C Language</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/c++.png" />
+            <p>C++</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/csharp.png" />
+            <p>C#</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/javascript.png" />
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/typescript.png" />
+            <p>TypeScript</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/python.png" />
+            <p>Python</p>
+          </div>
+        </div>
       </div>
 
-      <!-- Footer -->
-      <section id="footer">
-        <div class="container">
-          <ul class="copyright">
-            <li>
-              &copy; 2021 -
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              | All rights reserved.
-            </li>
-            <li>Aamna Akhtar</li>
-          </ul>
+      <!-- Frontend -->
+      <div class="skills-group">
+        <h3>Frontend</h3>
+        <div class="skills-block">
+          <div class="skill-container">
+            <img src="images/html.png" />
+            <p>HTML</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/css.png" />
+            <p>CSS</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/sass.png" />
+            <p>SCSS</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/ember.png" />
+            <p>Ember JS</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/react.png" />
+            <p>React JS</p>
+          </div>
+          <!-- <div class="skill-container">
+            <img src="images/bootstrap.png" />
+            <p>Bootstrap</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/tailwind.png" />
+            <p>Tailwind CSS</p>
+          </div> -->
         </div>
-      </section>
-    </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="skills-group">
+        <h3>Databases</h3>
+        <div class="skills-block">
+          <div class="skill-container">
+            <img src="images/mysql.png" />
+            <p>MySQL</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/postgresql.png" />
+            <p>PostgreSQL</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testing -->
+      <div class="skills-group">
+        <h3>Automation Testing</h3>
+        <div class="skills-block">
+          <div class="skill-container">
+            <img src="images/selenium.png" />
+            <p>Selenium</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skills-group">
+        <h3>Development Tools</h3>
+        <div class="skills-block">
+          <div class="skill-container">
+            <img src="images/git.png" />
+            <p>Git</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/github.png" />
+            <p>GitHub</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/sourcetree.png" />
+            <p>SourceTree</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/npm.png" />
+            <p>npm</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/vscode.png" />
+            <p>VS Code</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/visualstudio.png" />
+            <p>Visual Studio</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/jira.png" />
+            <p>Jira</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI -->
+      <div class="skills-group">
+        <h3>AI & Productivity</h3>
+        <div class="skills-block">
+          <div class="skill-container">
+            <img src="images/chatgpt.png" />
+            <p>ChatGPT</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/claude.png" />
+            <p>Claude</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/gemini.png" />
+            <p>Gemini</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/copilot.png" />
+            <p>Copilot</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/cline.png" />
+            <p>Cline</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/mcp.png" />
+            <p>MCP</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/aiagent.png" />
+            <p>AI Agents</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/genai.png" />
+            <p>Generative AI</p>
+          </div>
+          <div class="skill-container">
+            <img src="images/ml.png" />
+            <p>Machine Learning</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS -->
+      <div class="skills-group">
+        <h3>Core CS</h3>
+        <div class="skills-block">
+          <div class="skill-container">
+            <!-- <img src="images/dbms.png" /> -->
+            <p>DBMS</p>
+          </div>
+          <div class="skill-container">
+            <!-- <img src="images/oops.png" /> -->
+            <p>OOPs</p>
+          </div>
+          <div class="skill-container">
+            <!-- <img src="images/dsa.png" /> -->
+            <p>DSA</p>
+          </div>
+          <div class="skill-container">
+            <!-- <img src="images/system-design.png" /> -->
+            <p>System Design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!-- Education Section -->
+    <section class="timeline-section" id="education">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Bachelor of Technology – Computer Science and Engineering</h3>
+            <h5>Jul 2018 – Jun 2022</h5>
+            <p class="institute">
+              <a href="https://www.iul.ac.in/">Integral University, Lucknow</a>
+            </p>
+            <p class="grade">Grade - 89.2% (First Division with Distinction)</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Senior Secondary Education</h3>
+            <h5>2017</h5>
+            <p class="institute">
+              <a href="https://www.stmichaelspatna.edu.in/"
+                >St. Michael’s High School, Patna</a
+              >
+            </p>
+            <p class="grade">Grade - 82.4%</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Secondary Education</h3>
+            <h5>2015</h5>
+            <p class="institute">
+              <a href="https://www.shantimissionacademy.com/"
+                >Shanti Mission Academy, Saharsa</a
+              >
+            </p>
+            <p class="grade">Grade - 10 CGPA</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!-- Contact Me -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          If you want to know more about me or my work, or if you would just
+          like to say hello, send me a message. I'd love to hear from you.
+        </p>
+        <form
+          method="post"
+          action="https://formspree.io/f/mzbydjww"
+          id="my-form"
+        >
+          <div class="contact-container">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+              required
+            />
+            <input
+              type="file"
+              name="attachment"
+              id="attachment"
+              placeholder="Attach PDF (optional)"
+              accept="application/pdf"
+            />
+            <p>Only PDF files upto 1MB are accepted.</p>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <div class="action">
+              <button type="submit" class="submit button">Send Message</button>
+              <button type="reset" class="reset button">Reset Form</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="container">
+        <ul class="copyright">
+          <li>
+            &copy; 2021 -
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            | All rights reserved.
+          </li>
+          <li>Developed by Aamna Akhtar</li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -341,7 +695,7 @@
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- <script src="assets/js/main.js"></script> -->
     <script src="assets/js/index.js"></script>
   </body>
 </html>
