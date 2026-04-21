@@ -3,8 +3,8 @@ function downloadResume() {
   let link = document.createElement("a");
 
   // 2. Set the link's attributes
-  link.href = "Aamna-Resume.pdf"; // URL of the file
-  link.download = "Aamna-Resume.pdf"; // Suggested filename
+  link.href = "Aamna_Akhtar_Software_Engineer_3YOE.pdf"; // URL of the file
+  link.download = "Aamna_Akhtar_Software_Engineer_3YOE.pdf"; // Suggested filename
   link.style.display = "none"; // Hide the link
 
   // 3. Append the link to the body, simulate a click, and remove it
